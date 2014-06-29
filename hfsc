@@ -19,12 +19,18 @@
 # 
 #
 # References:
-# http://www.voip-info.org/wiki/view/QoS+Linux+with+HFSC
-# http://www.nslu2-linux.org/wiki/HowTo/EnableTrafficShaping
-# http://www.cs.cmu.edu/~hzhang/HFSC/main.html
-
-# Specify parameters of your xDSL. Give values slightly lower than the
-# nominal ones. For example, my line is 256/128, so I specify 240/100.
+# - Original shell script:
+#   http://www.voip-info.org/wiki/view/QoS+Linux+with+HFSC
+# - Kernel configuration (probably not necessary on modern distros)
+#   http://www.nslu2-linux.org/wiki/HowTo/EnableTrafficShaping
+# - Hierarchical Packet Schedulers presentation
+#   http://www.cs.cmu.edu/~hzhang/HFSC/main.html
+# - HFSC Scheduling with Linux
+#   http://linux-ip.net/articles/hfsc.en/
+#
+# When specifying parameters of your xDSL, provide values slightly lower
+# than the nominal ones.
+# For example, my line is 256/128, so I specify 240/100.
 
 # Uplink and downlink speeds
 DOWNLINK=$3
